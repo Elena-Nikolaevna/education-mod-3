@@ -31,13 +31,64 @@ return 'НЕ НАШЛИ :(' //Если не нашли
 console.log(findFriendByName(friends, 'Poly'));
 console.log(findFriendByName(friends, 'Chelsy')); */
 
-//==========Из массива друзей получить все имена друзей
+//==========Из массива друзей получить все ИМЕНА друзей
 
-const getAllNames = function (allFriends) {
+/* const getAllNames = function (allFriends) {
     const names = []; // создаем пустой массив в который будем пушить перебранные строки
     for (const friend of allFriends) {
         names.push(friend.name);
     }
     return names;
 };
-console.log(getAllNames(friends));
+console.log(getAllNames(friends)); */
+
+//============= Получаем всех друзей, которые ОНЛАЙН
+/* const getOnlineFriends = function (allFriends){
+    const onlineFriends = [];
+    
+    for (const friend of allFriends) {
+    //console.log(friend);
+    if(friend.online){
+        onlineFriends.push(friend) 
+    }
+    }
+    return onlineFriends;
+};
+console.log(getOnlineFriends(friends)); */
+
+//============= Получаем всех друзей, которые ОФФЛАЙН
+/* const getOfflineFriends = function (allFriends) {
+    const offlineFriends = [];
+
+    for (const friend of allFriends) {
+        //console.log(friend);
+        if (!friend.online) {
+            //Важно указано что если друг НЕ онлайн (!friend.online)
+            offlineFriends.push(friend);
+        }
+    }
+    return offlineFriends;
+};
+console.log(getOfflineFriends(friends)); */
+
+/// Получить друзей и тех которіе онлайн и тех которіе офлайн
+
+/* const getFriendsByOnlineStatus = function (allFriends) {
+    const friendByStatus = {
+        online: [],
+        offline: [],
+    };
+
+    for (const friend of allFriends) {
+        //console.log(friend);
+        if (friend.online) {
+            friendByStatus.online.push(friend);
+            continue;
+        };
+        friendByStatus.offline.push(friend);
+    };
+    return friendByStatus;
+};
+console.log(getFriendsByOnlineStatus(friends)); */
+
+
